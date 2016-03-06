@@ -15,7 +15,7 @@ function log(str) {
 }
 
 export default function(args) {
-  const api = `https://api.github.com/search/repositories?q=${args.prefix}+in:name+language:js&sort=stars&order=desc`;
+  const api = `https://api.github.com/search/repositories?q=${args.prefix}+in:name&sort=stars&order=desc`;
 
   fetch(api).then(function(res) {
     return res.json();
