@@ -7,10 +7,10 @@ import empty from './empty';
 import clone from './clone';
 import replace from './replace';
 
-function error(str){
+function error(str) {
   return console.error(`\x1B[31m${str}\x1B[39m`);
 }
-function log(str){
+function log(str) {
   return console.log(`\x1B[36m${str}\x1B[39m`);
 }
 
@@ -22,7 +22,7 @@ export default function(args) {
   }).then(function(data) {
     let repos = (data.items || []).map(function(v) {
       return {
-        name: v.name,
+        name: `${v.name.replace(args.prefix, '')} - ${v.description}`,
         value: v
       };
     });
