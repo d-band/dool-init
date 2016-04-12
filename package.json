@@ -29,7 +29,7 @@
     "commander": "~2.9.0",
     "cross-spawn": "~2.2.2",
     "inquirer": "~1.0.0",
-    "node-fetch": "~1.5.0"
+    "node-fetch": "~1.5.1"
   },
   "devDependencies": {
     "babel-cli": "~6.7.5",
