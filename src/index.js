@@ -38,7 +38,7 @@ export default function(args) {
       message: 'Choose template:',
       paginated: true,
       choices: repos
-    }], function(repo) {
+    }]).then(function(repo) {
       if (empty(args.cwd)) {
         let tpl = repo.template;
         clone(tpl.clone_url, args.cwd);
