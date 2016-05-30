@@ -28,7 +28,7 @@
   "dependencies": {
     "commander": "~2.9.0",
     "cross-spawn": "~4.0.0",
-    "inquirer": "~1.0.2",
+    "inquirer": "~1.0.3",
     "node-fetch": "~1.5.3"
   },
   "devDependencies": {
