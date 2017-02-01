@@ -3,6 +3,7 @@
 import { join } from 'path';
 import inquirer from 'inquirer';
 import fetch from 'node-fetch';
+import ora from 'ora';
 import empty from './empty';
 import clone from './clone';
 import replace from './replace';
@@ -15,9 +16,11 @@ function log(str) {
 }
 
 export default function(args) {
-  const api = `https://api.github.com/search/repositories?q=${args.prefix}+in:name&sort=stars&order=desc`;
+  const api = `https://api.github.com/search/repositories?q=org:d-band+${args.prefix}+in:name&sort=stars&order=desc`;
+  const spinner = ora('Searching templates...').start();
 
   fetch(api).then(function(res) {
+    spinner.succeed('Searching templates done.');
     return res.json();
   }).then(function(data) {
     let repos = (data.items || []).map(function(v) {

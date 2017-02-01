@@ -1,15 +1,13 @@
 'use strict';
 
 import { join } from 'path';
+import rimraf from 'rimraf';
 import spawn from 'cross-spawn';
 
 export default function(repo, cwd) {
   let cmds = [{
     cmd: 'git',
     args: ['clone', repo, cwd]
-  }, {
-    cmd: 'rm',
-    args: ['-rf', join(cwd, '.git')]
   }];
 
   cmds.forEach(function(v) {
@@ -17,5 +15,6 @@ export default function(repo, cwd) {
     spawn.sync(v.cmd, v.args, {
       stdio: 'inherit'
     });
+    rimraf.sync(join(cwd, '.git'));
   });
 }

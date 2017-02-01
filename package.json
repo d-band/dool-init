@@ -1,6 +1,6 @@
 {
   "name": "dool-init",
-  "version": "2.0.0-beta.1",
+  "version": "2.0.0-beta.2",
   "description": "d-band tool & dev tool",
   "main": "index.js",
   "bin": {
@@ -29,7 +29,9 @@
     "commander": "^2.9.0",
     "cross-spawn": "^5.0.0",
     "inquirer": "^3.0.1",
-    "node-fetch": "^1.6.3"
+    "node-fetch": "^1.6.3",
+    "ora": "^1.1.0",
+    "rimraf": "^2.5.4"
   },
   "devDependencies": {
     "babel-cli": "^6.22.2",
