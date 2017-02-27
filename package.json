@@ -1,13 +1,13 @@
 {
   "name": "dool-init",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "d-band tool & dev tool",
   "main": "index.js",
   "bin": {
     "dool-init": "cli.js"
   },
   "scripts": {
-    "build": "rm -rf lib && babel src --out-dir lib",
+    "build": "rimraf lib && babel src --out-dir lib",
     "prepublish": "npm run build"
   },
   "repository": {
@@ -37,6 +37,7 @@
     "babel-cli": "^6.23.0",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-es2015": "^6.22.0",
-    "babel-preset-stage-0": "^6.22.0"
+    "babel-preset-stage-0": "^6.22.0",
+    "rimraf": "^2.6.1"
   }
 }
