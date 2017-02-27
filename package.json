@@ -27,7 +27,7 @@
   "homepage": "https://github.com/d-band/dool-init#readme",
   "dependencies": {
     "commander": "^2.9.0",
-    "cross-spawn": "^5.0.0",
+    "cross-spawn": "^5.1.0",
     "inquirer": "^3.0.4",
     "node-fetch": "^1.6.3",
     "ora": "^1.1.0",
