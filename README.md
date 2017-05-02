@@ -1,6 +1,8 @@
 dool-init
 ===
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/d-band/dool-init.svg)](https://greenkeeper.io/)
+
 > d-band tool & dev tool based on webpack
 
 [![NPM version](https://img.shields.io/npm/v/dool-init.svg)](https://www.npmjs.com/package/dool-init)
