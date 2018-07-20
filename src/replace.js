@@ -1,5 +1,3 @@
-'use strict';
-
 import { join, basename } from 'path';
 import { readFileSync, writeFileSync } from 'fs';
 

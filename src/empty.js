@@ -1,5 +1,3 @@
-'use strict';
-
 import { statSync, readdirSync } from 'fs';
 
 export default function(dir) {

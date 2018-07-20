@@ -1,5 +1,3 @@
-'use strict';
-
 import { join } from 'path';
 import inquirer from 'inquirer';
 import fetch from 'node-fetch';
@@ -16,7 +14,7 @@ function log(str) {
 }
 
 export default function(args) {
-  const api = `https://api.github.com/search/repositories?q=org:d-band+${args.prefix}+in:name&sort=stars&order=desc`;
+  const api = `https://api.github.com/search/repositories?q=org:dool-templates+${args.prefix}+in:name&sort=stars&order=desc`;
   const spinner = ora('Searching templates...').start();
 
   fetch(api).then(function(res) {
@@ -44,9 +42,11 @@ export default function(args) {
     }]).then(function(repo) {
       if (empty(args.cwd)) {
         let tpl = repo.template;
-        clone(tpl.clone_url, args.cwd);
-        replace(args.cwd);
-        log('Done.');
+        clone(tpl.clone_url, args.cwd, err => {
+          if (err) return error('Clone failed!');
+          replace(args.cwd);
+          log('Done.');
+        });
       } else {
         error('Directory must be empty!');
       }
