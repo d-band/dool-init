@@ -15,10 +15,10 @@ function log(str) {
 
 export default (args) => {
   const api = `https://api.github.com/search/repositories?q=org:dool-templates+${args.prefix}+in:name&sort=stars&order=desc`;
-  const spinner = ora('Searching templates...').start();
+  const spinner = ora('Searching templates').start();
 
   fetch(api).then((res) => {
-    spinner.succeed('Searching templates done.');
+    spinner.succeed();
     return res.json();
   }).then((data) => {
     const repos = (data.items || []).map((v) => ({
@@ -46,5 +46,7 @@ export default (args) => {
         error('Directory must be empty!');
       }
     }).catch(() => log('Init cancelled.'));
+  }).catch(() => {
+    spinner.fail();
   });
 }
