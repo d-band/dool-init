@@ -1,6 +1,6 @@
 {
   "name": "dool-init",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "d-band tool & dev tool",
   "main": "index.js",
   "bin": {
@@ -26,17 +26,17 @@
   },
   "homepage": "https://github.com/d-band/dool-init#readme",
   "dependencies": {
-    "commander": "^2.20.0",
-    "enquirer": "^2.3.1",
+    "commander": "^4.1.1",
+    "enquirer": "^2.3.4",
     "git-clone": "^0.1.0",
     "node-fetch": "^2.6.0",
-    "ora": "^3.4.0",
-    "rimraf": "^2.6.3"
+    "ora": "^4.0.3",
+    "rimraf": "^3.0.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
     "babel-plugin-add-module-exports": "^1.0.2"
   }
 }
