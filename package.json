@@ -28,7 +28,7 @@
   "dependencies": {
     "commander": "^4.1.1",
     "enquirer": "^2.3.4",
-    "git-clone": "^0.1.0",
+    "git-clone": "^0.2.0",
     "node-fetch": "^2.6.0",
     "ora": "^4.0.3",
     "rimraf": "^3.0.1"
